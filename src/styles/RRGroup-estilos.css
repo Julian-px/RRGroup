@@ -1,0 +1,684 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body,
+p,
+a,
+li,
+label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#intro {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#intro-logo {
+    width: 300px;
+    height: auto;
+    animation: fadeInScale 1.5s ease forwards;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: #0b0027;
+    gap: 40px;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#header h1 {
+    color: #ff0000;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    flex: unset;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 0;
+    transition: all 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    border-bottom: #42e9ff solid 2px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#header h1 {
+    color: #ff0000;
+    margin: 0px;
+}
+
+#logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0) invert(1);
+}
+
+#logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #6f6f6f);
+}
+
+#menu-toggle {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    width: 25px;
+    height: 3px;
+    color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s;
+    margin: 1px 0;
+}
+
+#nav-links {
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+}
+
+#hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Hero.jpg') center/cover no-repeat;
+    /*Foto de <a href="https://unsplash.com/es/@sulyok_imaging?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Adrian Sulyok</a> en <a href="https://unsplash.com/es/fotos/lote-de-cajas-de-plastico-amarillas-y-blancas-sczNLg6rrhQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+#hero h1 {
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #ff3c3c;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #3c00ff;
+    transform: scale(1.05);
+}
+
+#sobre_nosotros {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9f9f9;
+    margin: 50px auto;
+    color: #fff;
+    border-radius: 12px;
+    transition: transform 0.3s, filter 0.3s;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sobre-nosotros.jpg');
+    /*Foto de <a href="https://unsplash.com/es/@abalashevsky?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Artem Balashevsky</a> en <a href="https://unsplash.com/es/fotos/un-camion-blanco-conduciendo-por-un-camino-rural-ZhNYKwjRMh4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+    padding: 60px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+#sobre_nosotros:hover {
+    transform: translateY(-5px) scale(1.02);
+    filter: grayscale(100%);
+}
+
+#mision {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9f9f9;
+    color: #fff;
+    margin: 50px auto;
+    text-align: left;
+    border-radius: 12px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mision.jpg');
+    /*Foto de <a href="https://unsplash.com/es/@marcinjozwiak?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marcin Jozwiak</a> en <a href="https://unsplash.com/es/fotos/vista-aerea-de-vehiculos-en-zona-de-aparcamiento-oh0DITWoHi4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+    padding: 60px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+#mision:hover {
+    transform: translateY(-5px) scale(1.02);
+    /*Foto de <a href="https://unsplash.com/es/@hdbernd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bernd Ã°Å¸â€œÂ· Dittrich</a> en <a href="https://unsplash.com/es/fotos/furgonetas-de-contenedores-eCc7FjMoR74?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+    filter: grayscale(100%);
+}
+
+#vision {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9f9f9;
+    color: #fff;
+    margin: 50px auto;
+    text-align: left;
+    border-radius: 12px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vision.jpg');
+    padding: 60px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+#vision:hover {
+    transform: translateY(-5px) scale(1.02);
+    filter: grayscale(100%);
+}
+
+#porque_elegirnos {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#porque_elegirnos ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#porque_elegirnos li {
+    background-color: #1a1a1a;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1 1 50px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+#porque_elegirnos li:hover {
+    transform: translateY(-5px) scale(1.03);
+    filter: grayscale(100%);
+}
+
+#porque_elegirnos span {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+}
+
+#porque_elegirnos li:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(li-1.jpg);
+    /*Foto de <a href="https://unsplash.com/es/@caleb_ruiter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Caleb Ruiter</a> en <a href="https://unsplash.com/es/fotos/camion-de-carga-blanco-en-la-carretera-durante-el-dia-EmEQ6kK_5P0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+}
+
+#porque_elegirnos li:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(li-2.jpg);
+    /*Foto de <a href="https://unsplash.com/es/@kommumikation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mika Baumeister</a> en <a href="https://unsplash.com/es/fotos/un-gran-buque-de-carga-cargado-con-muchos-contenedores-WqZwkrBuZIE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+}
+
+#porque_elegirnos li:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(li-3.jpg);
+    /*Foto de <a href="https://unsplash.com/es/@william07?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">william william</a> en <a href="https://unsplash.com/es/fotos/buque-de-carga-rojo-y-azul-en-el-cuerpo-de-agua-durante-el-dia-NndKt2kF1L4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+}
+
+#porque_elegirnos li:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(li-4.jpg);
+    /*Foto de <a href="https://unsplash.com/es/@bentje?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bent Van Aeken</a> en <a href="https://unsplash.com/es/fotos/una-vista-aerea-de-un-buque-de-carga-en-el-oceano-0A7YwYhZhWw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+}
+
+#marcas {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 60px 20px;
+    gap: 30px;
+}
+
+#marcas h2 {
+    width: 100%;
+}
+
+section {
+    margin: 60px auto;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#marcas img {
+    display: block;
+    border: 2px groove black;
+    border-radius: 200px;
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#marcas img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#marca-track {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+#contactar {
+    justify-content: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#datos {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 70px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ff0000;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+button {
+    background: #ff3c3c;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 0 10px 0;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff3c3c;
+    box-shadow: 0 0 8px rgba(255, 60, 60, 0.4);
+}
+
+#contacto {
+    background-color: #0b0027;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 60px 20px 20px;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+#footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+#footer-col-1,
+#footer-col-2,
+#footer-col-3,
+#footer-col-4 {
+    flex: 1 1 220px;
+}
+
+#footer-col-4 {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#footer-logo {
+    width: 120px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+}
+
+#footer-col-1 h3,
+#footer-col-2 h3,
+#footer-col-3 h3,
+#footer-col-4 h3 {
+    margin-bottom: 15px;
+    color: #ff3c3c;
+}
+
+#footer-col-2 a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+#footer-col-2 a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+#footer-col-1 p,
+#footer-col-3 p {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+#footer-col-3 i {
+    margin-right: 8px;
+}
+
+#footer-col-4 {}
+
+#footer-col-4 a {
+    font-size: 24px;
+    margin-right: 15px;
+    flex-direction: column;
+    color: #ff3c3c;
+    margin-left: 0;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#footer-col-4 a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+#footer-bottom {
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    margin: 20px 0 0 0;
+}
+
+#footer-bottom-text p {
+    font-size: 0.9rem;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 120px;
+    margin: 0;
+}
+
+#contactar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#contactar>div {
+    flex: 1
+}
+
+#contactanos {
+    background-color: #f3f3f3;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 90px;
+    }
+
+    #intro {
+        width: 100%;
+        padding: 0;
+    }
+
+    #intro-logo {
+        width: 170px;
+        /* mÃƒÂ¡s pequeÃƒÂ±o para pantallas chicas */
+    }
+
+    #header {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        top: 0px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #menu-toggle {
+        position: static;
+        order: 1;
+        display: flex;
+    }
+
+    #nav-links {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        display: none;
+        background-color: #0b0027;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        gap: 15px;
+    }
+
+    #nav-links a {
+        color: #ffffff;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #logo {
+        order: 2;
+    }
+
+    #hero {
+        margin-top: 0;
+    }
+
+    #contactar {
+        flex-direction: column;
+    }
+
+    #datos {
+        padding: 0;
+    }
+
+    input,
+    textarea {
+        max-width: 200px;
+    }
+
+    #contactanos {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+    }
+
+    #contactanos h2 {
+        font-size: 2.5rem;
+        padding: 0 5.5px 0 5.5px;
+    }
+
+    #datos h2 {
+        font-size: 2.8rem;
+        padding: 0 5.5px 0 5.5px;
+    }
+
+    #footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer-col-4 {
+        justify-content: center;
+    }
+
+    #footer-bottom {
+        width: 100%;
+    }
+
+    #footer-bottom-text p {
+        padding: 0;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+}
