@@ -3,7 +3,7 @@ import "../styles/RRGroup-estilos.css";
 ---
 
 <!doctype html>
-<html>
+<html class="scroll-smooth [scroll-padding-top:50px]">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,13 +28,15 @@ import "../styles/RRGroup-estilos.css";
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
-		<div id="intro">
-			<img id="intro-logo" src="/Logo_RRGroup.png" alt="Logo RRGroup" />
+	<body class="font-body">
+		<div id="intro" class="flex fixed top-0 left-0 w-screen h-screen bg-white justify-center items-center z-2000">
+			<img id="intro-logo" class="w-[300px] h-auto" src="/Logo_RRGroup.png" alt="Logo RRGroup"/>
 		</div>
-		<header id="header">
-			<div class="container">
-				<img id="logo" src="/Logo_RRGroup.png" alt="Logotipo" />
+		<header id="header" class="sticky top-0 z-[1000] bg-brand-dark gap-10 py-2.5 shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+			<div class="max-w-site mx-auto px-5 flex items-center justify-between">
+				<img id="logo"
+  class="w-[120px] h-auto block m-0 transition-all duration-300 brightness-0 invert hover:scale-105 hover:drop-shadow-[0_0_10px_#6f6f6f]"
+  src="/Logo_RRGroup.png" alt="Logotipo"/>
 				<div id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
 				<nav id="nav-links" aria-label="Menú principal">
 					<a href="#hero">Inicio</a>
@@ -46,13 +48,14 @@ import "../styles/RRGroup-estilos.css";
 				</nav>
 			</div>
 		</header>
-		<section id="hero">
-			<h1>Conectamos marcas con el mercado Paraguayo</h1>
-			<p>Distribución estratégica y confiable para cada negocio</p>
-			<a href="#contactar" class="btn">Contactanos</a>
+		<section id="hero" class="h-[70vh] bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/Hero.jpg')] bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center text-white text-center m-0">
+			<h1 class="font-heading font-bold text-5xl text-center">Conectamos marcas con el mercado Paraguayo</h1>
+			<p class="text-xl mb-8">Distribución estratégica y confiable para cada negocio</p>
+			<a href="#contactar" class="bg-brand-red text-white no-underline px-[35px] py-[15px] rounded-[30px] font-semibold transition-all duration-300 hover:bg-brand-blue hover:scale-105">Contactanos</a>
 		</section>
-		<section id="sobre_nosotros">
-			<h2>Sobre nosotros</h2>
+		<section id="sobre_nosotros"
+  class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/sobre-nosotros.jpg')] bg-cover bg-center bg-no-repeat my-[50px] mx-auto text-white rounded-xl transition-all duration-300 px-5 py-[60px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] max-w-site hover:-translate-y-[5px] hover:scale-[1.02] hover:grayscale">
+			<h2 class="font-heading font-bold text-5xl text-center">Sobre nosotros</h2>
 			<p>
 				RR GROUP E.A.S fue formado con una visión preponderante hacia el
 				mercado paraguayo. Buscamos innovarlo continuamente con una
@@ -65,8 +68,9 @@ import "../styles/RRGroup-estilos.css";
 				logística comercial.
 			</p>
 		</section>
-		<section id="mision">
-			<h2>Mision</h2>
+		<section id="mision"
+  class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/mision.jpg')] bg-cover bg-center bg-no-repeat my-[50px] mx-auto text-white text-left rounded-xl transition-all duration-300 px-5 py-[60px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] max-w-site hover:-translate-y-[5px] hover:scale-[1.02] hover:grayscale">
+			<h2 class="font-heading font-bold text-5xl text-center">Misión</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
 				voluptate incidunt iste optio maxime nobis ex voluptatem, quae
@@ -74,8 +78,9 @@ import "../styles/RRGroup-estilos.css";
 				laborum iure explicabo.
 			</p>
 		</section>
-		<section id="vision">
-			<h2>Vision</h2>
+		<section id="vision"
+  class="bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/vision.jpg')] bg-cover bg-center bg-no-repeat my-[50px] mx-auto text-white text-left rounded-xl transition-all duration-300 px-5 py-[60px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] max-w-site hover:-translate-y-[5px] hover:scale-[1.02] hover:grayscale">
+			<h2 class="font-heading font-bold text-5xl text-center">Visión</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
 				nobis quas distinctio ratione nesciunt doloribus quasi id illo
@@ -83,47 +88,51 @@ import "../styles/RRGroup-estilos.css";
 				nam, esse ut recusandae.
 			</p>
 		</section>
-		<section id="porque_elegirnos">
-			<h2>Porque elegirnos</h2>
-			<ul>
-				<li>
+		<section id="porque_elegirnos" class="max-w-site mx-auto my-[50px] px-5 py-[60px] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+			<h2 class="font-heading font-bold text-5xl text-center">Porque elegirnos</h2>
+			<ul class="list-none flex flex-wrap justify-center gap-[30px] m-0 p-0">
+				<li class="bg-[#1a1a1a] text-white p-[50px] rounded-xl text-center flex-[1_1_50px] transition-all duration-300 hover:-translate-y-[5px] hover:scale-[1.03] hover:grayscale
+        bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/li-1.jpg')] bg-cover bg-center">
 					Neque porro quisquam est qui dolorem ipsum quia dolor sit
 					amet, consectetur, adipisci velit...
 				</li>
-				<li>
+				<li class="bg-[#1a1a1a] text-white p-[50px] rounded-xl text-center flex-[1_1_50px] transition-all duration-300 hover:-translate-y-[5px] hover:scale-[1.03] hover:grayscale
+        bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/li-2.jpg')] bg-cover bg-center">
 					Neque porro quisquam est qui dolorem ipsum quia dolor sit
 					amet, consectetur, adipisci velit...
 				</li>
-				<li>
+				<li class="bg-[#1a1a1a] text-white p-[50px] rounded-xl text-center flex-[1_1_50px] transition-all duration-300 hover:-translate-y-[5px] hover:scale-[1.03] hover:grayscale
+        bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/li-3.jpg')] bg-cover bg-center">
 					Neque porro quisquam est qui dolorem ipsum quia dolor sit
 					amet, consectetur, adipisci velit...
 				</li>
-				<li>
+				<li class="bg-[#1a1a1a] text-white p-[50px] rounded-xl text-center flex-[1_1_50px] transition-all duration-300 hover:-translate-y-[5px] hover:scale-[1.03] hover:grayscale
+        bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/li-4.jpg')] bg-cover bg-center">
 					Neque porro quisquam est qui dolorem ipsum quia dolor sit
 					amet, consectetur, adipisci velit...
 				</li>
 			</ul>
 		</section>
-		<section id="marcas">
-			<h2>Marcas con las que trabajamos</h2>
-			<div id="marca-track">
+		<section id="marcas" class="relative overflow-hidden flex flex-wrap flex-col justify-center max-w-site mx-auto my-[50px] px-5 py-[60px] gap-[30px]">
+			<h2 class="font-heading font-bold text-5xl text-center w-full">Marcas con las que trabajamos</h2>
+			<div id="marca-track" class="flex gap-[30px] m-0">
 				<a href="https://thonet-vander.com" target="_blank">
-					<img src="/Logo_Thonet_Vander.webp" alt="Thonet Vander" />
+					<img class="block border-2 border-black rounded-full w-[240px] h-[240px] object-contain transition-[scale,box-shadow] duration-300 hover:scale-110 hover:shadow-[0_8px_15px_rgba(0,0,0,0.3)]" src="/Logo_Thonet_Vander.webp" alt="Thonet Vander"  />
 				</a>
 				<a href="https://devia.com.py" target="_blank">
-					<img src="/Logo_Devia.webp" alt="Devia" />
+					<img class="block border-2 border-black rounded-full w-[240px] h-[240px] object-contain transition-[scale,box-shadow] duration-300 hover:scale-110 hover:shadow-[0_8px_15px_rgba(0,0,0,0.3)]" src="/Logo_Devia.webp" alt="Devia" />
 				</a>
 				<a href="https://robotloona.com.py" target="_blank">
-					<img src="/Logo_Robot_Loona.avif" alt="RobotLoona" />
+					<img class="block border-2 border-black rounded-full w-[240px] h-[240px] object-contain transition-[scale,box-shadow] duration-300 hover:scale-110 hover:shadow-[0_8px_15px_rgba(0,0,0,0.3)]" src="/Logo_Robot_Loona.avif" alt="RobotLoona"/>
 				</a>
 				<a href="https://www.facebook.com/ecovers.py/" target="_blank">
-					<img src="/Logo_Ecovers.jpg" alt="Ecovers" />
+					<img class="block border-2 border-black rounded-full w-[240px] h-[240px] object-contain transition-[scale,box-shadow] duration-300 hover:scale-110 hover:shadow-[0_8px_15px_rgba(0,0,0,0.3)]" src="/Logo_Ecovers.jpg" alt="Ecovers"/>
 				</a>
 			</div>
 		</section>
-		<section id="contactar">
-			<div id="datos">
-				<h2>Contactos</h2>
+		<section id="contactar" class="flex justify-between items-start gap-[40px] max-w-site mx-auto my-[50px] px-5 py-[60px] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+			<div id="datos" class="flex-1 bg-white text-black p-[70px] rounded-xl text-center">
+				<h2 class="font-heading font-bold text-5xl text-center">Contactos</h2>
 				<p>
 					<i class="fa-solid fa-location-dot"></i> Ubicación: Asunción,
 					Paraguay
@@ -135,67 +144,67 @@ import "../styles/RRGroup-estilos.css";
 					<i class="fa-solid fa-envelope"></i> Email: contacto@gmail.com
 				</p>
 			</div>
-			<div id="contactanos">
-				<h2>Contáctanos</h2>
-				<form action="#" method="post">
+			<div id="contactanos" class="flex-1 bg-[#f3f3f3] rounded-xl">
+				<h2 class="font-heading font-bold text-5xl text-center">Contáctanos</h2>
+				<form action="#" method="post" class="flex flex-col justify-center items-center gap-5">
 					<label for="nombre">Nombre completo:</label>
-					<input type="text" id="nombre" name="nombre" required />
+					<input class="w-full max-w-[400px] p-2 bg-white border border-red-500 rounded-xl text-base outline-none transition-all duration-300 focus:border-brand-red focus:shadow-[0_0_8px_rgba(255,60,60,0.4)]" type="text" id="nombre" name="nombre" required />
 					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" required />
+					<input class="w-full max-w-[400px] p-2 bg-white border border-red-500 rounded-xl text-base outline-none transition-all duration-300 focus:border-brand-red focus:shadow-[0_0_8px_rgba(255,60,60,0.4)]" type="email" id="email" name="email" required />
 					<label for="telefono">Teléfono:</label>
-					<input type="tel" id="telefono" name="telefono" required />
+					<input class="w-full max-w-[400px] p-2 bg-white border border-red-500 rounded-xl text-base outline-none transition-all duration-300 focus:border-brand-red focus:shadow-[0_0_8px_rgba(255,60,60,0.4)]" type="tel" id="telefono" name="telefono" required />
 					<label for="mensaje">Mensaje:</label>
-					<textarea id="mensaje" name="mensaje" required></textarea>
-					<button type="submit">Enviar</button>
+					<textarea class="w-full max-w-[400px] p-2 bg-white border border-red-500 rounded-xl text-base outline-none transition-all duration-300 focus:border-brand-red focus:shadow-[0_0_8px_rgba(255,60,60,0.4)]" id="mensaje" name="mensaje" required></textarea>
+					<button class="bg-brand-red text-white px-5 py-2.5 mb-2.5 rounded-[20px] font-semibold transition-all duration-300 border-none cursor-pointer hover:bg-brand-blue hover:scale-105" type="submit">Enviar</button>
 				</form>
 			</div>
 		</section>
-		<footer id="contacto">
-			<div class="container" id="footer-container">
-				<div id="footer-col-1">
-					<img src="/Logo_RRGroup.png" alt="Logo" id="footer-logo" />
-					<p>
+		<footer id="contacto" class="bg-brand-dark text-white px-5 pt-[60px] pb-5">
+			<div class="max-w-site mx-auto px-5 flex flex-wrap items-start gap-[40px] justify-between" id="footer-container">
+				<div id="footer-col-1" class="flex-[1_1_220px]">
+					<img src="/Logo_RRGroup.png" alt="Logo" id="footer-logo" class="w-[120px] mb-4 brightness-0 invert" />
+					<p class="text-white text-[0.95rem]">
 						Conectamos marcas con el mercado paraguayo mediante
 						distribución estratégica y confiable.
 					</p>
 				</div>
-				<div id="footer-col-2">
-					<h3>Enlaces</h3>
-					<a href="#hero">Inicio</a>
-					<a href="#sobre_nosotros">Sobre Nosotros</a>
-					<a href="#mision">Misión</a>
-					<a href="#vision">Visión</a>
-					<a href="#porque_elegirnos">Porque elegirnos</a>
-					<a href="#marcas">Marcas con las que trabajamos</a>
-					<a href="#contactar">Contactar</a>
+				<div id="footer-col-2" class="flex-[1_1_220px]">
+					<h3 class="mb-4 text-brand-red">Enlaces</h3>
+					<a class="block text-white no-underline mb-2 transition-all duration-300 hover:translate-x-[5px]" href="#hero">Inicio</a>
+					<a class="block text-white no-underline mb-2 transition-all duration-300 hover:translate-x-[5px]" href="#sobre_nosotros">Sobre Nosotros</a>
+					<a class="block text-white no-underline mb-2 transition-all duration-300 hover:translate-x-[5px]" href="#mision">Misión</a>
+					<a class="block text-white no-underline mb-2 transition-all duration-300 hover:translate-x-[5px]" href="#vision">Visión</a>
+					<a class="block text-white no-underline mb-2 transition-all duration-300 hover:translate-x-[5px]" href="#porque_elegirnos">Porque elegirnos</a>
+					<a class="block text-white no-underline mb-2 transition-all duration-300 hover:translate-x-[5px]" href="#marcas">Marcas con las que trabajamos</a>
+					<a class="block text-white no-underline mb-2 transition-all duration-300 hover:translate-x-[5px]" href="#contactar">Contactar</a>
 				</div>
-				<div id="footer-col-3">
-					<h3>Contacto</h3>
-					<p>
+				<div id="footer-col-3" class="flex-[1_1_220px]">
+					<h3 class="mb-4 text-brand-red">Contacto</h3>
+					<p class="text-white text-[0.95rem]">
 						<i class="fa-solid fa-location-dot"></i>
 						Asunción, Paraguay
 					</p>
-					<p>
+					<p class="text-white text-[0.95rem]">
 						<i class="fa-solid fa-phone"></i> +595 983 123456
 					</p>
-					<p>
+					<p class="text-white text-[0.95rem]">
 						<i class="fa-solid fa-envelope"></i> contacto@gmail.com
 					</p>
 				</div>
-				<div id="footer-col-4">
-					<h3>Seguinos</h3>
+				<div id="footer-col-4" class="flex-[1_1_220px] flex flex-col items-center">
+					<h3 class="mb-4 text-brand-red">Seguinos</h3>
 					<div class="social-icons">
-						<a href="https://www.facebook.com" target="_blank">
+						<a class="text-2xl text-brand-red no-underline transition-all duration-300 hover:text-white hover:scale-125" href="https://www.facebook.com" target="_blank">
 							<i class="fa-brands fa-facebook"></i>
 						</a>
-						<a href="https://www.instagram.com" target="_blank">
+						<a class="text-2xl text-brand-red no-underline transition-all duration-300 hover:text-white hover:scale-125" href="https://www.instagram.com" target="_blank">
 							<i class="fa-brands fa-instagram"></i>
 						</a>
 					</div>
 				</div>
 			</div>
-			<div id="footer-bottom">
-				<div id="footer-bottom-text">
+			<div class="w-full border-t border-white pt-[30px] mt-5">
+				<div id="footer-bottom-text" class="text-[0.9rem] text-left text-white md:pl-[120px] m-0">
 					<p>&copy; 2026 RRGroup - Todos los derechos reservados</p>
 				</div>
 			</div>
