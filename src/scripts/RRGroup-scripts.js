@@ -1,8 +1,15 @@
+window.history.scrollRestoration = "manual";
+window.scrollTo(0, 0);
+document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
 const track = document.getElementById('marca-track');
 track.innerHTML += track.innerHTML ; // duplicamos contenido
 const totalWidth = track.scrollWidth / 2;
 let scrollAmount = 0;
 const speed = 0.7;
+window.addEventListener("DOMContentLoaded", () => {
+    window.scrollTo(0, 0);
+});
 
 function animateCarousel() {
     scrollAmount += speed; // velocidad del scroll
@@ -21,11 +28,17 @@ window.addEventListener('scroll', () => {
     });
 });
 window.addEventListener('load', () => {
+    const intro = document.getElementById('intro');
+
     setTimeout(() => {
-        const intro = document.getElementById('intro');
         intro.style.transition = 'opacity 0.8s';
         intro.style.opacity = '0';
-        setTimeout(() => intro.style.display = 'none', 800);
+
+        setTimeout(() => {
+            intro.style.display = 'none';
+            window.scrollTo(0, 0);
+        }, 800);
+
     }, 2000);
 });
 const menuToggle = document.getElementById('menu-toggle');

@@ -152,6 +152,10 @@ section.visible {
 #marcas img {
     will-change: transform;
 }
+#hero h1,
+#hero p {
+    margin: 0;
+}
 
 @media (max-width: 768px) {
     html {
